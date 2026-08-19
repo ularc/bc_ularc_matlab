@@ -37,7 +37,7 @@ fi
 #
 
 # Load the required environment
-module load <%= context.auto_modules_matlab %>
+module load <%= context.modules %>
 
 # Launch MATLAB
 <%- if context.global_enable_vis.to_i == 1 -%>
