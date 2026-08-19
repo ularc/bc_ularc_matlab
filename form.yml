@@ -5,6 +5,7 @@ form:
   - bc_job_name
   - bc_account
   - modules
+  - working_dir
   - bc_queue
   - global_job_type
   - global_enable_mem
@@ -22,7 +23,7 @@ attributes:
   bc_job_name:
     widget: "text_field"
     label: "Job Name"
-    value: "Matlab"
+    value: "matlab"
     required: true
   modules:
     value: "matlab"
