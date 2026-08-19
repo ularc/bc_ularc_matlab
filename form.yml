@@ -4,22 +4,22 @@ cluster:
   - "ascend"
   - "cardinal"
 form:
-  - auto_modules_matlab
-  - auto_accounts
-  - global_job_type
-  - global_enable_mem
+  - bc_account
+  - modules
+  - working_dir
+  - bc_queue
   - bc_num_nodes
-  - global_num_cores
-  - global_mem
   - bc_num_hours
-  - global_gpus
-  - global_enable_vis
-  - global_gpu_type
-  - global_enable_debug
   - bc_vnc_resolution
-  - bc_email_on_started
 attributes:
-  auto_modules_matlab:
-    default: false
+  modules:
+    value: "matlab"
+    label: "Modules to load"
   bc_vnc_resolution:
     required: true
+  working_dir:
+    widget: "path_selector"
+    label: "Root Directory"
+    show_hidden: false
+    show_files: false
+    help: "Select your project directory; defaults to $HOME"
