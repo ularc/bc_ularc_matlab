@@ -11,6 +11,7 @@ native:
 - "--ntasks-per-node"
 - "<%= global_num_cores.to_i %>"
 - "--partition"
+- "<%= bc_queue %>"
 <%- if global_enable_debug.to_i == 1 -%>
 - "debug"
 <%- elsif global_gpus.to_i > 0 -%>
