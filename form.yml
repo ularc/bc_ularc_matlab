@@ -21,7 +21,9 @@ form:
 attributes:
   bc_job_name:
     widget: "text_field"
-    defaults: "Matlab"
+    label: "Job Name"
+    value: "Matlab"
+    required: true
   modules:
     value: "matlab"
     label: "Modules to load"
