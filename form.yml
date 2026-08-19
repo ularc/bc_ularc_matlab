@@ -1,8 +1,6 @@
 ---
 cluster:
-  - "pitzer"
-  - "ascend"
-  - "cardinal"
+  - "zurada"
 form:
   - bc_account
   - modules
