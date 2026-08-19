@@ -2,6 +2,7 @@
 cluster:
   - "zurada"
 form:
+  - bc_job_name
   - bc_account
   - modules
   - bc_queue
@@ -18,6 +19,9 @@ form:
   - bc_vnc_resolution
   - bc_email_on_started
 attributes:
+  bc_job_name:
+    widget: "text_field"
+    defaults: "Matlab"
   modules:
     value: "matlab"
     label: "Modules to load"
