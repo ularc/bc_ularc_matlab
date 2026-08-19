@@ -15,8 +15,6 @@ script:
   - "debug"
   <%- elsif global_gpus.to_i > 0 -%>
   - "<%= global_gpu_type.split('-').drop(1).join('-') %>"
-  <%- else %>
-  - "batch"
   <%- end %>
   <%- if global_enable_mem.to_i == 1  -%>
   - "--mem"
