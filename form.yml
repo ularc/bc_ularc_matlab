@@ -4,11 +4,18 @@ cluster:
 form:
   - bc_account
   - modules
-  - working_dir
-  - bc_queue
+  - global_job_type
+  - global_enable_mem
   - bc_num_nodes
+  - global_num_cores
+  - global_mem
   - bc_num_hours
+  - global_gpus
+  - global_enable_vis
+  - global_gpu_type
+  - global_enable_debug
   - bc_vnc_resolution
+  - bc_email_on_started
 attributes:
   modules:
     value: "matlab"
