@@ -4,6 +4,7 @@ cluster:
 form:
   - bc_account
   - modules
+  - bc_queue
   - global_job_type
   - global_enable_mem
   - bc_num_nodes
