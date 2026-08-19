@@ -29,3 +29,4 @@ attributes:
     show_hidden: false
     show_files: false
     help: "Select your project directory; defaults to $HOME"
+  
