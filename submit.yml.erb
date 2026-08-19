@@ -2,21 +2,20 @@
 batch_connect:
   template: "vnc"
 script:
-<%- if global_gpus.to_i > 0 -%>
-gpus_per_node: <%= global_gpus %>
-<%- end %>
-native:
-- "--nodes"
-- "<%= bc_num_nodes.to_i %>"
-- "--ntasks-per-node"
-- "<%= global_num_cores.to_i %>"
-- "--partition"
-- "<%= bc_queue %>"
-<%- if global_enable_mem.to_i == 1  -%>
-- "--mem"
-- "<%= global_mem.to_i%>G"
-<%- end %>
-<%- if global_enable_vis.to_i == 1 -%>
-- "--gres"
-- "vis"
-<%- end %>
+  queue: "<%= bc_queue %>"
+  <%- if global_gpus.to_i > 0 -%>
+  gpus_per_node: <%= global_gpus %>
+  <%- end -%>
+  native:
+    - "--nodes"
+    - "<%= bc_num_nodes.to_i %>"
+    - "--ntasks-per-node"
+    - "<%= global_num_cores.to_i %>"
+    <%- if global_enable_mem.to_i == 1 -%>
+    - "--mem"
+    - "<%= global_mem.to_i %>G"
+    <%- end -%>
+    <%- if global_enable_vis.to_i == 1 -%>
+    - "--gres"
+    - "vis"
+    <%- end -%>
