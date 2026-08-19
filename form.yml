@@ -23,6 +23,9 @@ attributes:
     label: "Modules to load"
   bc_vnc_resolution:
     required: true
+  bc_queue:
+    widget: "text_field"
+    required: true
   working_dir:
     widget: "path_selector"
     label: "Root Directory"
