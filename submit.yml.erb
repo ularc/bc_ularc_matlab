@@ -7,6 +7,8 @@ script:
   gpus_per_node: <%= global_gpus %>
   <%- end %>
   native:
+  - "--job-name"
+  - "<%= bc_job_name %>"
   - "--nodes"
   - "<%= bc_num_nodes.to_i %>"
   - "--ntasks-per-node"
