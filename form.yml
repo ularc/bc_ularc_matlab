@@ -7,6 +7,7 @@ form:
   - modules
   - working_dir
   - bc_queue
+  - bc_num_nodes
   - global_num_cores
   - bc_num_hours
 attributes:
@@ -29,4 +30,5 @@ attributes:
     show_hidden: false
     show_files: false
     help: "Select your project directory; defaults to $HOME"
+  
   

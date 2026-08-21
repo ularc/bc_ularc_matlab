@@ -40,13 +40,6 @@ fi
 module load <%= context.modules %>
 
 # Launch MATLAB
-<%- if context.global_enable_vis.to_i == 1 -%>
-LMOD_EXACT_MATCH=no module load virtualgl
-module list
-set -x
-vglrun matlab -desktop -nosoftwareopengl
-<%- else -%>
 module list
 set -x
 matlab -desktop
-<%- end -%>
